@@ -14,4 +14,6 @@ public class PedidoDaoJPA implements PedidoDao {
     private EntityManager em;
 
     public void setup(Configuracion config) {
-        this.emf = (EntityManagerFactory) config
+        this.emf = (EntityManagerFactory) config;
+    }
+}
