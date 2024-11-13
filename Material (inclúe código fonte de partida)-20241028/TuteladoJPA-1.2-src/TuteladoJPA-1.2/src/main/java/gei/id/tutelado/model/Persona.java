@@ -1,3 +1,5 @@
+package gei.id.tutelado.model;
+
 import javax.persistence.*;
 
 @Entity
