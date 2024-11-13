@@ -16,4 +16,28 @@ public class PedidoDaoJPA implements PedidoDao {
     public void setup(Configuracion config) {
         this.emf = (EntityManagerFactory) config;
     }
+    @Override
+    public long cuentaPedidos(){
+        return -3;
+    }
+    @Override
+    public List<Pedido> recuperaPedidosPorCliente(Cliente cliente){
+        return null;
+    }
+    @Override
+    public Pedido modifica(Pedido pedido){
+        return null;
+    }
+    @Override
+    public void elimina (Pedido pedido){
+
+    }
+    @Override
+    public Pedido almacena (Pedido pedido){
+        return null;
+    }
+    @Override
+    public Pedido recuperaPorId(Long id){
+        return null;
+    }
 }

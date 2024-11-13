@@ -2,6 +2,7 @@ package gei.id.tutelado.dao;
 
 import gei.id.tutelado.configuracion.Configuracion;
 import gei.id.tutelado.model.Persona;
+import gei.id.tutelado.model.Cliente;//Añadido este import
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -69,13 +70,13 @@ public class PersonaDaoJPA implements PersonaDao {
         return persona;
     }
 
-    @Override
+    @Override   //Los pedidos son cosas de clientes no personas
     public Persona inicializaPedidosLazy(Persona persona) { // MO4.5
         try {
             em = emf.createEntityManager();
             em.getTransaction().begin();
             persona = em.merge(persona);
-            persona.getHistorialPedidos().size(); // Inicializa propiedad LAZY
+            ((Cliente)persona).getHistorialPedidos().size(); // Inicializa propiedad LAZY
             em.getTransaction().commit();
         } finally {
             if (em.isOpen()) em.close();
