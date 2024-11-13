@@ -23,4 +23,19 @@ public class Cliente extends Persona {
     }
 
     // Getters y setters
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Set<Pedido> getHistorialPedidos() {
+        return historialPedidos;
+    }
+
+    public void setHistorialPedidos(Set<Pedido> historialPedidos) {
+        this.historialPedidos = historialPedidos;
+    }
 }

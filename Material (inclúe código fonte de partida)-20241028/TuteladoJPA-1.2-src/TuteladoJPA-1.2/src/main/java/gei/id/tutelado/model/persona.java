@@ -12,7 +12,29 @@ public abstract class Persona {
     @Column(nullable = false, unique = true)
     private String nif;
 
-    // Constructor, getters y setters
+    // Constructor
+    public Persona() {}
+
+    public Persona(String nif) {
+        this.nif = nif;
+    }
+
+    // Getters y setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNif() {
+        return nif;
+    }
+
+    public void setNif(String nif) {
+        this.nif = nif;
+    }
 
     // Implementación de métodos equals y hashCode usando nif
     @Override

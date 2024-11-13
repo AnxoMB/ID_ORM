@@ -27,4 +27,43 @@ public class Pedido {
     private List<Long> listaCantidades;
 
     // Getters y setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public List<Producto> getListaProductos() {
+        return listaProductos;
+    }
+
+    public void setListaProductos(List<Producto> listaProductos) {
+        this.listaProductos = listaProductos;
+    }
+
+    public List<Long> getListaCantidades() {
+        return listaCantidades;
+    }
+
+    public void setListaCantidades(List<Long> listaCantidades) {
+        this.listaCantidades = listaCantidades;
+    }
 }
