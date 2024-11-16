@@ -1,0 +1,37 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="TuteladoPU" transaction-type="RESOURCE_LOCAL">
+        <description>Unidade de persistencia (única) para traballo tutelado de ID</description>
+
+        <!-- Persistence provider -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Entity classes -->
+        <class>gei.id.tutelado.model.Usuario</class>
+        <class>gei.id.tutelado.model.EntradaLog</class>
+        <class>gei.id.tutelado.model.Dependiente</class>
+        <class>gei.id.tutelado.model.Cliente</class>
+        <class>gei.id.tutelado.model.Producto</class>
+        <class>gei.id.tutelado.model.Persona</class>
+        <class>gei.id.tutelado.model.Pedido</class>
+
+        <!-- Exclude other unlisted classes -->
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <!-- Database connection properties -->
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/tuteladoDB"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.username" value="postgres"/>
+            <property name="hibernate.connection.password" value="luis2002"/>
+
+            <!-- Hibernate properties -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+        </properties>
+    </persistence-unit>
+</persistence>
